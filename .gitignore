@@ -1,0 +1,10 @@
+.nuxt
+.output
+node_modules
+coverage
+.cypress-cache
+cypress/screenshots
+cypress/videos
+cypress/downloads
+.DS_Store
+*.log

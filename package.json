@@ -1,0 +1,53 @@
+{
+  "name": "note-space",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "npm@10.9.3",
+  "scripts": {
+    "build": "nuxt build",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "dev": "nuxt dev",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "npm run lint:eslint && npm run lint:styles && npm run typecheck",
+    "lint:eslint": "eslint . --max-warnings=0",
+    "lint:styles": "stylelint \"**/*.{css,scss}\" --allow-empty-input",
+    "preview": "nuxt preview",
+    "test": "vitest run",
+    "test:e2e": "start-server-and-test \"npm run dev -- --host 127.0.0.1\" http://127.0.0.1:3000 cypress:run",
+    "test:watch": "vitest",
+    "typecheck": "nuxt typecheck"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.11.2",
+    "nuxt": "^3.17.5",
+    "pinia": "^3.0.3",
+    "vue": "^3.5.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.35.0",
+    "@types/node": "^22.14.1",
+    "@typescript-eslint/eslint-plugin": "^8.44.0",
+    "@typescript-eslint/parser": "^8.44.0",
+    "cypress": "^14.5.4",
+    "eslint": "^9.35.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-vue": "^10.5.0",
+    "globals": "^16.4.0",
+    "jsdom": "^26.1.0",
+    "prettier": "^3.6.2",
+    "sass": "^1.89.2",
+    "start-server-and-test": "^2.0.5",
+    "stylelint": "^16.24.0",
+    "stylelint-config-recess-order": "^7.4.0",
+    "stylelint-config-standard-scss": "^16.0.0",
+    "stylelint-order": "^8.1.1",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.44.0",
+    "vitest": "^3.2.4",
+    "vue-eslint-parser": "^10.2.0",
+    "vue-tsc": "^2.2.12"
+  }
+}
