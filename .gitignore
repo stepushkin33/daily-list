@@ -1,7 +1,10 @@
-.nuxt
-.output
-node_modules
-coverage
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+.idea/
+.nuxt/
+.output/
 .cypress-cache
 cypress/screenshots
 cypress/videos

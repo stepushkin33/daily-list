@@ -1,7 +1,7 @@
 services:
-  note-space:
+  daily-list:
     build:
       context: .
     ports:
-      - '3000:3000'
+      - '3000:80'
     restart: unless-stopped

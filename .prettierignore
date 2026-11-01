@@ -1,5 +1,6 @@
+node_modules
+dist
+coverage
 .nuxt
 .output
-node_modules
-coverage
 pnpm-lock.yaml

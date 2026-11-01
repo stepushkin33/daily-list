@@ -1,7 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
-  <title id="title">Note Space</title>
-  <desc id="desc">Синий квадрат с белой отметкой выполненной задачи</desc>
-  <rect width="64" height="64" rx="14" fill="#2563eb"/>
-  <path d="m16 32 10 10 22-23" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
-  <path d="M18 51h28" fill="none" stroke="#a9c7ff" stroke-linecap="round" stroke-width="3"/>
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="7" y="7" width="114" height="114" rx="8" fill="#C86B55"/>
+  <path d="M34 65.5L54 84L95 40" stroke="#FFFDF5" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M24 103H104" stroke="#F7D98B" stroke-width="5" stroke-linecap="round"/>
 </svg>

@@ -1,57 +1,46 @@
 import eslint from '@eslint/js'
 import prettier from 'eslint-config-prettier'
-import vue from 'eslint-plugin-vue'
-import tseslint from 'typescript-eslint'
-import vueParser from 'vue-eslint-parser'
+import reactHooks from 'eslint-plugin-react-hooks'
+import reactRefresh from 'eslint-plugin-react-refresh'
 import globals from 'globals'
+import tseslint from 'typescript-eslint'
 
 export default tseslint.config(
   {
-    ignores: ['.nuxt/**', '.output/**', 'node_modules/**', 'coverage/**'],
+    ignores: [
+      '.nuxt/**',
+      '.output/**',
+      'dist/**',
+      'node_modules/**',
+      'coverage/**',
+      'cypress/screenshots/**',
+      'cypress/videos/**',
+    ],
   },
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
-  ...vue.configs['flat/recommended'],
   {
-    files: ['**/*.vue'],
-    languageOptions: {
-      parser: vueParser,
-      parserOptions: {
-        ecmaVersion: 'latest',
-        parser: tseslint.parser,
-        sourceType: 'module',
-      },
-    },
-  },
-  {
-    files: ['**/*.{ts,vue}'],
+    files: ['src/**/*.{ts,tsx}'],
     languageOptions: {
       parserOptions: {
+        ecmaFeatures: { jsx: true },
         ecmaVersion: 'latest',
         sourceType: 'module',
-        extraFileExtensions: ['.vue'],
       },
       globals: {
         ...globals.browser,
         ...globals.node,
-        definePageMeta: 'readonly',
-        defineNuxtConfig: 'readonly',
-        navigateTo: 'readonly',
-        useRoute: 'readonly',
-        useRouter: 'readonly',
       },
+    },
+    plugins: {
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
     },
     rules: {
       '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-      'vue/attribute-hyphenation': ['error', 'always'],
-      'vue/component-name-in-template-casing': ['error', 'PascalCase'],
-      'vue/multi-word-component-names': 'off',
-      'vue/no-mutating-props': 'error',
-      'vue/no-v-html': 'error',
-      'vue/require-default-prop': 'off',
-      'vue/require-explicit-emits': 'error',
-      'vue/singleline-html-element-content-newline': 'off',
-      'vue/max-attributes-per-line': ['error', { singleline: 4, multiline: 1 }],
+      'react-hooks/exhaustive-deps': 'warn',
+      'react-hooks/rules-of-hooks': 'error',
+      'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
     },
   },
   {

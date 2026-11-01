@@ -1,16 +1,9 @@
 {
-  "extends": ["stylelint-config-standard-scss", "stylelint-config-recess-order"],
+  "extends": ["stylelint-config-standard-scss"],
+  "plugins": ["stylelint-order"],
   "rules": {
-    "at-rule-no-unknown": null,
-    "color-hex-length": null,
-    "color-function-notation": null,
-    "declaration-empty-line-before": null,
-    "media-feature-range-notation": null,
-    "no-descending-specificity": null,
-    "order/properties-order": null,
-    "scss/at-mixin-pattern": "^[a-zA-Z0-9_-]+$",
-    "selector-class-pattern": null,
-    "selector-pseudo-class-no-unknown": [true, { "ignorePseudoClasses": ["deep", "global"] }],
-    "value-keyword-case": null
+    "order/order": ["custom-properties", "declarations"],
+    "property-no-vendor-prefix": null,
+    "selector-class-pattern": null
   }
 }
